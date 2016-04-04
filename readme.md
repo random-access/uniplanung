@@ -1,6 +1,10 @@
 # Uniplanung
 
 A web application for storing exam dates and grades.
+<p align="center">
+<img width="100%" src="https://github.com/random-access/uniplanung/blob/master/screenshot.png" alt="Screenshot">
+</p>
+
 
 ### Requirements
   - PHP >= 5.5.9
