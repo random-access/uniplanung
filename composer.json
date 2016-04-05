@@ -8,7 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
-	"guzzlehttp/guzzle": "~5.3|~6.0"
+	      "guzzlehttp/guzzle": "~5.3|~6.0",
+        "jenssegers/agent": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

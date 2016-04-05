@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Course;
 use App\Repositories\CourseRepository;
 
+use Jenssegers\Agent\Agent;
+
 class CourseController extends Controller
 {
     /**
@@ -32,7 +34,9 @@ class CourseController extends Controller
      */
     public function index(Request $request)
     {
-        return view('courses.index', [
+        $agent = new Agent();
+        $prefix = $agent->isMobile() && !$agent->isTablet()? 'mobile' : 'desktop';
+        return view('courses.' . $prefix . '.index', [
             'courses' => $this->courses->forUser($request->user()),
         ]);
     }
