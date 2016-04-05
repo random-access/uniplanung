@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container box">
         <div class="col-sm-12">
 
             <!-- Panel for current Courses -->

@@ -23,6 +23,14 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        .textbox {
+            margin: 15px;
+        }
+        
+        .box {
+            padding-bottom: 50px;
+        }
     </style>
 </head>
 <body id="app-layout">
@@ -69,7 +77,7 @@
     </nav>
 
     @yield('content')
-    
+
     <!-- Footer -->
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
