@@ -24,10 +24,20 @@
             margin-right: 6px;
         }
 
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.42;
+            border-radius: 15px;
+        }
+
         .textbox {
             margin: 15px;
         }
-        
+
         .box {
             padding-bottom: 50px;
         }

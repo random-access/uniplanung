@@ -32,12 +32,5 @@
         </div>
     </div>
 </div>
-<style>
-    .textbox {
-        margin: 15px;
-    }
-    .box {
-        padding-bottom: 50px;
-    }
-</style>
+
 @endsection

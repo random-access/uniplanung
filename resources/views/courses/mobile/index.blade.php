@@ -53,8 +53,8 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
-                                <button type="submit" id="delete-course-{{ $course->id }}" class="btn btn-danger btn-circle-sm pull-right">
-                                    <i class="fa fa-btn fa-trash-o"></i>
+                                <button type="submit" id="delete-course-{{ $course->id }}" class="btn btn-danger btn-circle pull-right">
+                                    <i class="fa fa-trash-o"></i>
                                 </button>
                             </form>
                         </div>
