@@ -169,6 +169,7 @@
             </div>
             <!-- End panel for adding courses-->
 
+            <!-- JavaScript methods for index section -->
             <script>
               function adjustDateFieldVisibility() {
                 if ($('#emode option:selected').val() === "none") {

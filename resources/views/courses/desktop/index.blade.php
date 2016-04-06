@@ -14,6 +14,7 @@
                     <div class="panel-body table-responsive">
                         <table class="table table-striped course-table">
                             <thead>
+                                <th>&nbsp;</th>
                                 <th>Kursnummer</th>
                                 <th>Kursbezeichnung</th>
                                 <th>Status</th>
@@ -25,9 +26,10 @@
                             <tbody>
                                 @foreach ($courses as $course)
                                     <tr>
+                                        <td class="table-text course-icn"><div><i class="fa fa-check-circle-o"></i></div></td>
                                         <td class="table-text"><div>{{ $course->course_no }}</div></td>
                                         <td class="table-text"><div>{{ $course->course_name }}</div></td>
-                                        <td class="table-text"><div>{{ $course->status }}</div></td>
+                                        <td class="table-text status"><div>{{ $course->status }}</div></td>
                                         <td class="table-text"><div>{{ $course->exam_mode }}</div></td>
                                         <td class="table-text"><div>{{ $course->exam_date }}</div></td>
                                         <td class="table-text"><div>{{ $course->exam_grade }}</div></td>
@@ -156,35 +158,51 @@
                 </div>
             </div>
             <!-- End panel for adding courses-->
-
-            <script>
-              function adjustDateFieldVisibility() {
-                if ($('#emode option:selected').val() === "none") {
-                    $('#date-group').hide();
-                    $('#edate').val("");
-                    $('#egrade').prop( "disabled", true);
-                    $('#egrade').val("");
-                } else {
-                    $('#date-group').show();
-                    $('#edate').val("<?php echo date('Y-m-d'); ?>");
-                    $('#egrade').prop( "disabled", false);
-                }
-              }
-
-              function adjustDateFieldValue() {
-                if ($('#no-date').is(':checked')) {
-                    $('#egrade').prop( "disabled", true);
-                    $('#egrade').val("");
-                    $('#edate').prop( "disabled", true);
-                    $('#edate').val("");
-                } else {
-                    $('#egrade').prop( "disabled", false);
-                    $('#edate').prop( "disabled", false);
-                    $('#edate').val("<?php echo date('Y-m-d'); ?>");
-                }
-              }
-            </script>
-
         </div><!-- End main column -->
     </div><!-- End container -->
+
+    <!-- JavaScript code for index section-->
+    <script>
+      $( document ).ready(function(){
+        $('.course-icn').each(function(index, obj) {
+            var currentStatus = $('.status > div').get(index).innerHTML;
+            var color;
+            if (currentStatus === "Erledigt") {
+                color = "#5cb85c";
+            } else if (currentStatus === "In Arbeit") {
+                color = "#d9534f";
+            } else {
+                color = "black";
+            }
+            console.log(obj);
+            $( this ).css("color", color);
+        });
+      });
+
+      function adjustDateFieldVisibility() {
+        if ($('#emode option:selected').val() === "none") {
+            $('#date-group').hide();
+            $('#edate').val("");
+            $('#egrade').prop( "disabled", true);
+            $('#egrade').val("");
+        } else {
+            $('#date-group').show();
+            $('#edate').val("<?php echo date('Y-m-d'); ?>");
+            $('#egrade').prop( "disabled", false);
+        }
+      }
+
+      function adjustDateFieldValue() {
+        if ($('#no-date').is(':checked')) {
+            $('#egrade').prop( "disabled", true);
+            $('#egrade').val("");
+            $('#edate').prop( "disabled", true);
+            $('#edate').val("");
+        } else {
+            $('#egrade').prop( "disabled", false);
+            $('#edate').prop( "disabled", false);
+            $('#edate').val("<?php echo date('Y-m-d'); ?>");
+        }
+      }
+    </script>
 @endsection

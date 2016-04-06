@@ -15,6 +15,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
     <style>
         body {
             font-family: 'Lato';
@@ -25,12 +30,12 @@
         }
 
         .btn-circle {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             text-align: center;
             padding: 6px 0;
             font-size: 12px;
-            line-height: 1.42;
+            line-height: 1px;
             border-radius: 15px;
         }
 
@@ -94,10 +99,5 @@
           <p class="navbar-text pull-right">© 2016 - Monika Schrenk</p>
         </div>
     </div>
-
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
